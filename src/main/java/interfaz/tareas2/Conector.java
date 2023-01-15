@@ -4,11 +4,9 @@
  */
 package interfaz.tareas2;
 
-import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.ResultSet;
 /**
  *
  * @author Sergio
@@ -26,10 +24,10 @@ public class Conector {
     
     public static Connection makeConnect(){
         try{
-            //jdbc:mysql://localhost:3306/zoo?zeroDateTimeBehavior=CONVERT_TO_NULL [zoologico on Default schema]
-            String url="jdbc:mysql://"+HOST+":"+PORT+"/"+DBNAME;
-            Connection conex = DriverManager.getConnection(url, USER, PASS);
-            return conex;
+            //jdbc:mysql://localhost:3306/clasroom?zeroDateTimeBehavior=CONVERT_TO_NULL [root on Default schema]
+            //jdbc:mariadb://localhost:3306/clasroom [root on Default schema]
+            String url="jdbc:mysql://"+HOST+":"+PORT+"/"+DBNAME+"?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            return DriverManager.getConnection(url, USER, PASS);
         }catch(SQLException ex){
             System.err.println("Error al establecer la conexion "+ex.getMessage());
             return null;
