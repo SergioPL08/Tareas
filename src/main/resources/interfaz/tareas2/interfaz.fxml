@@ -279,9 +279,9 @@
                      </rowConstraints>
                      <children>
                         <Label text="Usuario" />
-                        <TextField fx:id="user" prefHeight="25.0" prefWidth="223.0" GridPane.rowIndex="1" />
+                        <TextField fx:id="username" prefHeight="25.0" prefWidth="223.0" GridPane.rowIndex="1" />
                         <Label text="Contraseña" GridPane.rowIndex="2" />
-                        <TextField prefHeight="25.0" prefWidth="223.0" GridPane.rowIndex="3" />
+                        <TextField fx:id="password" prefHeight="25.0" prefWidth="223.0" GridPane.rowIndex="3" />
                         <Button mnemonicParsing="false" onAction="#iniciaSesion" prefHeight="25.0" prefWidth="411.0" style="-fx-background-color: #ff6400;" text="Entrar" textFill="WHITE" GridPane.rowIndex="5" />
                         <Label fx:id="crearCuenta" prefHeight="17.0" prefWidth="232.0" text="¿No tienes una cuenta? Crea una aquí" GridPane.rowIndex="6" />
                      </children>
@@ -291,6 +291,7 @@
                         <Image url="@../../../resources/img/Login.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="msg" layoutX="346.0" layoutY="345.0" prefHeight="17.0" prefWidth="237.0" textFill="#dd1717" />
                </children>
             </AnchorPane>
          </children>
